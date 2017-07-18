@@ -1,0 +1,11 @@
+- name: create instance 
+  ec2:
+    key_name: quickfix
+    instance_type: t2.micro
+    region: us-east-2
+    image: ami-a4b395c1
+    wait: yes
+    #group: webserver
+    count: 1
+    vpc_subnet_id: subnet-19f17b62
+    assign_public_ip: yes
